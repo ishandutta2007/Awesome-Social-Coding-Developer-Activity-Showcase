@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background linear gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d18" />
+      <stop offset="50%" stop-color="#0e1726" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Glowing accent gradients -->
+    <linearGradient id="cyan-violet-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="emerald-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="pill-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.25" />
+    </linearGradient>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.35" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes floatSlow {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes floatReverse {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(12px) rotate(-1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.08); }
+    }
+    @keyframes graphShimmer {
+      0%, 100% { fill-opacity: 0.85; }
+      50% { fill-opacity: 0.45; }
+    }
+    @keyframes streakPulse {
+      0%, 100% { stroke-dashoffset: 0; }
+      50% { stroke-dashoffset: 20; }
+    }
+    @keyframes pillSlide {
+      0% { transform: translateX(0px); }
+      50% { transform: translateX(8px); }
+      100% { transform: translateX(0px); }
+    }
+
+    .bg-grid { fill: url(#grid-pattern); }
+    .floating-card-1 { animation: floatSlow 8s ease-in-out infinite; }
+    .floating-card-2 { animation: floatReverse 9s ease-in-out infinite; }
+    .glow-sphere-1 { animation: pulseGlow 6s ease-in-out infinite; transform-origin: 200px 180px; }
+    .glow-sphere-2 { animation: pulseGlow 7s ease-in-out infinite 1s; transform-origin: 1000px 180px; }
+    .graph-bar { animation: graphShimmer 3s ease-in-out infinite; }
+    .streak-flow { stroke-dasharray: 6 4; animation: streakPulse 4s linear infinite; }
+    .sliding-pill { animation: pillSlide 5s ease-in-out infinite; }
+
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.8px;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" fill="url(#bg-grad)" rx="16" />
+  <rect width="1200" height="360" class="bg-grid" rx="16" />
+
+  <!-- Ambient Blurred Glowing Orbs (Dynamic) -->
+  <circle cx="200" cy="180" r="140" fill="#38bdf8" opacity="0.15" filter="url(#glow-cyan)" class="glow-sphere-1" />
+  <circle cx="1020" cy="170" r="150" fill="#a855f7" opacity="0.18" filter="url(#glow-cyan)" class="glow-sphere-2" />
+  <circle cx="600" cy="30" r="110" fill="#6366f1" opacity="0.12" filter="url(#glow-cyan)" />
+
+  <!-- Side Floating Interactive Graphic 1 (Left: Git Contribution Heatmap Matrix) -->
+  <g class="floating-card-1" transform="translate(60, 85)" filter="url(#card-shadow)">
+    <rect width="210" height="190" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2" />
+    <text x="20" y="32" fill="#e2e8f0" font-family="sans-serif" font-weight="600" font-size="13">Activity Heatmap</text>
+    <circle cx="180" cy="28" r="4" fill="#22c55e" />
+
+    <!-- Contribution Graph Grid (12 Columns x 5 Rows) -->
+    <g transform="translate(20, 50)">
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="12" height="12" rx="2.5" fill="#1e293b" />
+      <rect x="16" y="0" width="12" height="12" rx="2.5" fill="#0e4429" />
+      <rect x="32" y="0" width="12" height="12" rx="2.5" fill="#006d32" />
+      <rect x="48" y="0" width="12" height="12" rx="2.5" fill="#26a641" />
+      <rect x="64" y="0" width="12" height="12" rx="2.5" fill="#39d353" class="graph-bar" />
+      <rect x="80" y="0" width="12" height="12" rx="2.5" fill="#006d32" />
+      <rect x="96" y="0" width="12" height="12" rx="2.5" fill="#26a641" />
+      <rect x="112" y="0" width="12" height="12" rx="2.5" fill="#1e293b" />
+      <rect x="128" y="0" width="12" height="12" rx="2.5" fill="#0e4429" />
+      <rect x="144" y="0" width="12" height="12" rx="2.5" fill="#39d353" />
+
+      <!-- Row 2 -->
+      <rect x="0" y="16" width="12" height="12" rx="2.5" fill="#0e4429" />
+      <rect x="16" y="16" width="12" height="12" rx="2.5" fill="#26a641" />
+      <rect x="32" y="16" width="12" height="12" rx="2.5" fill="#39d353" class="graph-bar" />
+      <rect x="48" y="16" width="12" height="12" rx="2.5" fill="#39d353" />
+      <rect x="64" y="16" width="12" height="12" rx="2.5" fill="#006d32" />
+      <rect x="80" y="16" width="12" height="12" rx="2.5" fill="#1e293b" />
+      <rect x="96" y="16" width="12" height="12" rx="2.5" fill="#26a641" />
+      <rect x="112" y="16" width="12" height="12" rx="2.5" fill="#39d353" />
+      <rect x="128" y="16" width="12" height="12" rx="2.5" fill="#006d32" />
+      <rect x="144" y="16" width="12" height="12" rx="2.5" fill="#26a641" />
+
+      <!-- Row 3 -->
+      <rect x="0" y="32" width="12" height="12" rx="2.5" fill="#1e293b" />
+      <rect x="16" y="32" width="12" height="12" rx="2.5" fill="#006d32" />
+      <rect x="32" y="32" width="12" height="12" rx="2.5" fill="#26a641" />
+      <rect x="48" y="32" width="12" height="12" rx="2.5" fill="#1e293b" />
+      <rect x="64" y="32" width="12" height="12" rx="2.5" fill="#0e4429" />
+      <rect x="80" y="32" width="12" height="12" rx="2.5" fill="#39d353" />
+      <rect x="96" y="32" width="12" height="12" rx="2.5" fill="#39d353" class="graph-bar" />
+      <rect x="112" y="32" width="12" height="12" rx="2.5" fill="#26a641" />
+      <rect x="128" y="32" width="12" height="12" rx="2.5" fill="#1e293b" />
+      <rect x="144" y="32" width="12" height="12" rx="2.5" fill="#006d32" />
+
+      <!-- Row 4 -->
+      <rect x="0" y="48" width="12" height="12" rx="2.5" fill="#0e4429" />
+      <rect x="16" y="48" width="12" height="12" rx="2.5" fill="#39d353" />
+      <rect x="32" y="48" width="12" height="12" rx="2.5" fill="#39d353" />
+      <rect x="48" y="48" width="12" height="12" rx="2.5" fill="#26a641" />
+      <rect x="64" y="48" width="12" height="12" rx="2.5" fill="#006d32" />
+      <rect x="80" y="48" width="12" height="12" rx="2.5" fill="#26a641" />
+      <rect x="96" y="48" width="12" height="12" rx="2.5" fill="#0e4429" />
+      <rect x="112" y="48" width="12" height="12" rx="2.5" fill="#1e293b" />
+      <rect x="128" y="48" width="12" height="12" rx="2.5" fill="#26a641" />
+      <rect x="144" y="48" width="12" height="12" rx="2.5" fill="#39d353" class="graph-bar" />
+    </g>
+
+    <!-- Stat badge -->
+    <rect x="20" y="132" width="170" height="34" rx="8" fill="#0f172a" stroke="#334155" stroke-width="0.8" />
+    <circle cx="36" cy="149" r="4.5" fill="#38bdf8" />
+    <text x="48" y="153" fill="#94a3b8" font-family="sans-serif" font-size="11">Current Streak: <tspan fill="#38bdf8" font-weight="700">142 Days 🔥</tspan></text>
+  </g>
+
+  <!-- Side Floating Interactive Graphic 2 (Right: Developer Analytics / Languages Card) -->
+  <g class="floating-card-2" transform="translate(930, 85)" filter="url(#card-shadow)">
+    <rect width="210" height="190" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2" />
+    <text x="20" y="32" fill="#e2e8f0" font-family="sans-serif" font-weight="600" font-size="13">Top Languages</text>
+    <circle cx="180" cy="28" r="4" fill="#a855f7" />
+
+    <!-- Language Bars -->
+    <g transform="translate(20, 52)">
+      <text x="0" y="11" fill="#cbd5e1" font-family="sans-serif" font-size="11">TypeScript</text>
+      <text x="170" y="11" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="end">48%</text>
+      <rect x="0" y="17" width="170" height="6" rx="3" fill="#1e293b" />
+      <rect x="0" y="17" width="82" height="6" rx="3" fill="#38bdf8" />
+
+      <text x="0" y="43" fill="#cbd5e1" font-family="sans-serif" font-size="11">Python</text>
+      <text x="170" y="43" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="end">28%</text>
+      <rect x="0" y="49" width="170" height="6" rx="3" fill="#1e293b" />
+      <rect x="0" y="49" width="48" height="6" rx="3" fill="#facc15" />
+
+      <text x="0" y="75" fill="#cbd5e1" font-family="sans-serif" font-size="11">Go / Rust</text>
+      <text x="170" y="75" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="end">24%</text>
+      <rect x="0" y="81" width="170" height="6" rx="3" fill="#1e293b" />
+      <rect x="0" y="81" width="41" height="6" rx="3" fill="#ec4899" />
+    </g>
+
+    <!-- Dynamic Pulse Line -->
+    <path d="M 25 156 Q 70 142 105 158 T 185 150" fill="none" stroke="#818cf8" stroke-width="2" class="streak-flow" />
+  </g>
+
+  <!-- FOREGROUND CONTENT: Title, Subtitle, Badges (Unobstructed & Perfectly Centered) -->
+  <g transform="translate(600, 0)" text-anchor="middle">
+    <!-- Top Category Pill Badge -->
+    <g transform="translate(0, 48)">
+      <rect x="-155" y="0" width="310" height="28" rx="14" fill="url(#pill-grad)" stroke="#6366f1" stroke-width="1" />
+      <text x="0" y="18" fill="#a5b4fc" class="badge-text" text-anchor="middle">⚡ CURATED DEVELOPER SHOWCASE ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title (Gradient Foreground) -->
+    <text x="0" y="132" class="title-text" fill="url(#cyan-violet-grad)">
+      Social Coding &amp; Activity Showcase
+    </text>
+
+    <!-- Subtitle Line 1 -->
+    <text x="0" y="172" class="subtitle-text">
+      The definitive directory for GitHub profiles, dynamic widgets, metrics cards &amp; dev networks
+    </text>
+
+    <!-- Subtitle Line 2 / Feature highlights -->
+    <text x="0" y="200" font-family="sans-serif" font-size="14" fill="#64748b">
+      Contribution Graphs • Badges &amp; Trophy Shelves • Video Demos • Self-Hosted Coding Trackers
+    </text>
+
+    <!-- Feature Pills in Foreground -->
+    <g transform="translate(0, 240)">
+      <!-- Pill 1: Profile Widgets -->
+      <g transform="translate(-230, 0)" class="sliding-pill">
+        <rect x="0" y="0" width="140" height="34" rx="17" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+        <text x="70" y="22" fill="#e2e8f0" font-family="sans-serif" font-weight="600" font-size="12" text-anchor="middle">📊 SVG Stats</text>
+      </g>
+
+      <!-- Pill 2: Dev Communities -->
+      <g transform="translate(-75, 0)">
+        <rect x="0" y="0" width="150" height="34" rx="17" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" />
+        <text x="75" y="22" fill="#e2e8f0" font-family="sans-serif" font-weight="600" font-size="12" text-anchor="middle">🌐 Dev Networks</text>
+      </g>
+
+      <!-- Pill 3: Code Demo Engines -->
+      <g transform="translate(90, 0)">
+        <rect x="0" y="0" width="140" height="34" rx="17" fill="#1e293b" stroke="#c084fc" stroke-width="1.2" />
+        <text x="70" y="22" fill="#e2e8f0" font-family="sans-serif" font-weight="600" font-size="12" text-anchor="middle">🎥 Code Videos</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metric Bar -->
+    <g transform="translate(0, 310)">
+      <text x="-120" y="14" fill="#94a3b8" font-family="sans-serif" font-size="12">⭐ 250k+ Stars Indexed</text>
+      <circle cx="-30" cy="10" r="2.5" fill="#475569" />
+      <text x="0" y="14" fill="#94a3b8" font-family="sans-serif" font-size="12">🔓 100% Open &amp; SaaS</text>
+      <circle cx="30" cy="10" r="2.5" fill="#475569" />
+      <text x="120" y="14" fill="#94a3b8" font-family="sans-serif" font-size="12">🚀 Updated Bi-Weekly</text>
+    </g>
+  </g>
+</svg>
