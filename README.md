@@ -45,7 +45,8 @@ The broader **Developer Tools, Portfolios & Community Engagement Software** mark
 - [💻 Open-Source GitHub Projects](#-open-source-github-projects-)
 - [🛠️ Architectural Blueprints & Stacks](#️-architectural-blueprints--stacks-)
 - [🤝 How to Contribute](#-how-to-contribute-)
-- [💖 Support & Star History](#-support--star-history-)
+- [💖 Support](#-support-)
+- [📈 Star History](#-star-history)
 - [⚖️ Disclaimer](#️-disclaimer-)
 
 ---
@@ -144,11 +145,19 @@ Contributions, additions, and updates are warmly welcomed! 🌟
 
 ---
 
-## 💖 Support & Star History ⭐📈
+## 💖 Support 💖☕
 
-If you find this showcase directory useful, please consider giving it a star! 🌟
+If you find this directory valuable for your projects, personal portfolio, or research, please consider supporting the project:
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase&type=Date)](https://star-history.com/#ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase&Date)
+- ⭐ **Star this repository** to help other developers discover it across GitHub.
+- 🍴 **Fork and share** with your network, engineering colleagues, or developer communities.
+- ☕ **Sponsor & Buy a Coffee**: Support ongoing curation, ecosystem updates, and open-source research via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007). Thank you for your support! 🙏✨
+
+---
+
+##  Star History
+#[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase&type=date&legend=top-left)`
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase&type=date&legend=top-left)`
 
 ---
 
