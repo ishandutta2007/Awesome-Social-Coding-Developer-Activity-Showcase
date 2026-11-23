@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Social-Coding-Developer-Activity-Showcase/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -74,7 +74,7 @@ Curated open-source repositories for building custom profile READMEs, generating
 
 Ranked in descending order by **GitHub Stargazer Count** 🌟📉 (each badge links directly to stargazers):
 
-| 📦 Project & Repository | 🌟 Star Count | 💻 Tech Stack | 🎯 Description & Feature Highlights |
+| 📦 Project & Repository | 🌟 Stars_Count | 💻 Tech Stack | 🎯 Description & Feature Highlights |
 | :--- | :--- | :--- | :--- |
 | **[GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats)** | [![Stars](https://img.shields.io/github/stars/anuraghazra/github-readme-stats?style=social&color=white)](https://github.com/anuraghazra/github-readme-stats/stargazers) | JavaScript, NodeJS, SVG | Dynamically generated SVG cards for GitHub READMEs displaying overall stats, streak metrics, top programming languages, and pinned repo highlights. ⚡📊 |
 | **[Remotion](https://github.com/remotion-dev/remotion)** | [![Stars](https://img.shields.io/github/stars/remotion-dev/remotion?style=social&color=white)](https://github.com/remotion-dev/remotion/stargazers) | TypeScript, React, WebAssembly | Programmatically create MP4 launch videos, dynamic coding walkthroughs, and animated data visualizations using standard React web components. 🎥✨ |
@@ -140,7 +140,7 @@ Contributions, additions, and updates are warmly welcomed! 🌟
 1. **Fork** the repository to your account.
 2. **Add / Edit** listings in `README.md` following the established table structure.
    - For SaaS listings: include specific starting tier pricing, explicit free-tier limits, and company scale.
-   - For Open-Source listings: include an official GitHub repo with a `style=social&color=white` star badge linking to the `/stargazers` page, and sort descending by star count.
+   - For Open-Source listings: include an official GitHub repo with a `style=social&color=white` Stars_Badge linking to the `/stargazers` page, and sort descending by Stars_Count.
 3. **Submit a PR** with a concise description of your additions.
 
 ---
